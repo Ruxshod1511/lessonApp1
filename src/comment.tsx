@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 interface Comment {
   id: number;
@@ -9,7 +9,6 @@ interface Comment {
 
 const Comments: React.FC = () => {
   const { postId } = useParams<{ postId: string }>();
-  const navigate = useNavigate();
   const [comments, setComments] = useState<Comment[]>([]);
 
   useEffect(() => {
